@@ -9,6 +9,8 @@ builder.Services.AddControllers();
 builder.Services.AddTransient<Seed>();
 builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 builder.Services.AddScoped<IPokemonRepository, IPokemonRepository>();
+builder.Services.AddScoped<ICategoryRepository, ICategoryRepository>();
+builder.Services.AddScoped<ICountryRepository, ICountryRepository>();
 
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddControllersWithViews();
